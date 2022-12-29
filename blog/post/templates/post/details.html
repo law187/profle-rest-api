@@ -1,0 +1,20 @@
+
+{% extends 'post/base.html' %}
+
+   {% block content %}
+<div style="text-align:center"><a href="{% url 'home'%}" > Go Home </a>
+
+  </div>
+
+{{all.title}}
+<br>
+<br>
+{{all.date}}
+<br>
+<br>
+
+{{all.author}}
+<br>
+<br>
+ <img src="{{all.image.url}}" />
+ {% endblock %}

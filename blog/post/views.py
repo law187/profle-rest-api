@@ -27,6 +27,18 @@ def create(request):
         return render(request,'post/create.html')
 
 
+def search(request):
+
+        if request.method =='POST':
+            searched = request.POST['searched']
+            titles = models.Post.objects.filter(title__contains=searched)
+            return render(request,'post/search.html',{'searched':searched,'titles':titles})
+        else:
+                return render(request,'post/search.html')
+
+
+
+
 
 
 def home(request):

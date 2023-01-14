@@ -27,7 +27,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('create/',views.create, name='create'),
     path('home/',views.home, name='home'),
+    path('search/',views.search, name='searched'),
     path('page/<int:id>/',views.details, name='details'),
     path('accounts/',include('accounts.urls')),
-    path('accounts/',include('django.contrib.auth.urls'))
+    path('accounts/',include('django.contrib.auth.urls')),
+
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

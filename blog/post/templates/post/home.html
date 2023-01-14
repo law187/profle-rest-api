@@ -12,9 +12,9 @@
 {%for a in all.all%}
 
 <a href="{% url 'details'  a.id %}"> {{a.title}}</a>
-    {{author}}
-  {{a.body}}
-    {author}}
+    {{a.author}}
+    {{a.body}}
+
 {% endfor %}
 
 

@@ -1,0 +1,31 @@
+{% extends 'post/base.html' %}
+
+   {% block content %}
+
+
+
+
+   {% if searched %}
+       <h1>These are the matched results</h1>
+        {% for title in titles %}
+
+          <a href="{% url 'details' title.id %}">{{title}} - {{title.author}}</a>
+
+        {% endfor %}
+   {% else %}
+       <h1>you have NOT looked for any </h1>
+   {% endif %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {% endblock %}

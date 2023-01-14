@@ -45,6 +45,11 @@
         </li>
       </ul>
     </div>
+    <form class="form-inline my-2 my-lg-0" method="POST" action="{% url 'searched' %}">
+         {% csrf_token %}
+        <input class="h-25 p-2" type="search" placeholder="Search" name="searched">
+        <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
+    </form>
   </div>
 </nav>
 
